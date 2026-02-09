@@ -27,6 +27,25 @@
       --radius: 18px;
     }
 
+      /* Avatar image support (used for Matt) */
+.avatar.avatarImg{
+  padding:0;
+  overflow:hidden;
+}
+.avatar.avatarImg::before{
+  /* keep your animated glow */
+}
+.avatar.avatarImg img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  border-radius: 14px;
+  position:relative;
+  z-index:2;
+  filter: saturate(1.08) contrast(1.05);
+}
+    
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -512,7 +531,13 @@
             <button class="cardBtn" type="button" aria-label="Open Matt portfolio">
               <div class="row">
                 <div class="left">
-                  <div class="avatar" aria-hidden="true"><div class="initials">MT</div></div>
+                  <div class="avatar avatarImg" aria-hidden="true">
+                      <img
+                    src="./matt/Assets/MattProfileGif.gif"
+                alt="Matt"
+                    onerror="this.onerror=null;this.src='./matt/Assets/MattProfile.png';"
+                                                                    >
+                </div>
                   <div style="min-width:0">
                     <div class="name">Matt</div>
                     <div class="desc"> UI Design / UI Animation</div>
